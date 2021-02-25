@@ -2,3 +2,22 @@
     height: 80px;
     text-align: center;
 }
+.header{
+    text-align: center;
+}
+.header nav{
+    background-color: black;
+    line-height: 40px;
+    
+}
+nav a{
+    text-decoration: none;
+    color:white;
+    margin-right: 20px;
+    padding: 5px;
+    font-size: 20px;
+}
+
+nav a:hover{
+    background:grey;
+}
