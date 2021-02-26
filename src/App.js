@@ -14,6 +14,7 @@ function App() {
     <Heder></Heder>
     <Shop></Shop>
     
+    
  
     </div>
   );

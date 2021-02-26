@@ -1,21 +1,36 @@
 import React, { useState } from 'react';
 import fakeData from '../../fakeData';
+import Cart from '../Cart/Cart';
+import Prodect from '../Prodect/Prodect';
+import './Shop.css';
 
-const shop = () => {
+const Shop = () => {
     const fast10 =fakeData.slice(0,10);
    const [products , setProducts]=useState(fast10);
-
+   const [ cart,setCart]= useState([]);
+   const addHendeler=(prodect)=>{
+       console.log("add addd add", prodect);
+       const newCart= [...cart, prodect];
+       setCart(newCart);
+  
+   };
    
- 
-
- 
   
     return (
-        <div>
-            <h3>shonar bangla</h3>
-            <h1>{fast10.name}</h1>
+       
+        <div className="shop-contener">
+            <div className="prodect-conteainer">
+                {
+                    products.map(pd=><Prodect prodect={pd} addHendeler={addHendeler}></Prodect>)
+                }
+                 
+            </div>
+             <Cart cart={cart}></Cart>
+            
+           
+           
         </div>
     );
 };
 
-export default shop;
+export default Shop;

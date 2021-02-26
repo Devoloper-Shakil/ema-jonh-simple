@@ -1,0 +1,23 @@
+.prodect-contener{
+    display: flex;
+    border-bottom: 2px solid gray;
+    margin-bottom: 5px ;
+    padding-bottom: 5px;
+    width: 800px;
+}
+.prodect-name{
+    color: blue;
+    font-weight: 400px;
+}
+.mane-btn{
+    width: 200px;
+    padding: 5px;
+    background-color: goldenrod;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.prodects-info{
+    margin-left: 40px;
+    margin-bottom: 10px;
+}

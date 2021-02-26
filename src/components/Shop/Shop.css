@@ -1,0 +1,15 @@
+.shop-contener{
+    display: flex;
+}
+.prodect-conteainer{
+    margin-left: 20px;
+    padding: 20px;
+    border-right: 2px solid gray;
+}
+.shop-card{
+    padding: 5px;
+}
+.shop-contener{
+    width: 90%;
+    margin: auto;
+}
