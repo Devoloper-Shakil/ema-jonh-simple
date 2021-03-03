@@ -1,5 +1,6 @@
 import { faExternalLinkSquareAlt } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Cart.css';
 
 const Cart = (props) => {
@@ -24,6 +25,9 @@ const Cart = (props) => {
                 <h3> Shipping:{shipping}</h3>
                 <h3>Text:{text}</h3>
                 <h2>Trotal :{total}</h2>
+                <Link to="/reviw">
+                    <button className="mane-btn">Review Card</button>
+                </Link>
 
                 </div>
            
