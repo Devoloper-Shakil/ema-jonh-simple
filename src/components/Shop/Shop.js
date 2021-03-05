@@ -1,11 +1,23 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import fakeData from '../../fakeData';
-import { addToDatabaseCart } from '../../utilities/databaseManager';
+import { addToDatabaseCart, getDatabaseCart } from '../../utilities/databaseManager';
 import Cart from '../Cart/Cart';
 import Prodect from '../Prodect/Prodect';
 import './Shop.css';
+import { Link } from 'react-router-dom';
 
 const Shop = () => {
+    useEffect(()=>{
+        const savedCard=getDatabaseCart([]);
+        const prodectKes = Object.keys(savedCard);
+        const cartProdects= prodectKes.map(key=>{
+            const prodect= fakeData.find(pd=>pd.key===key);
+            prodect.quanintty= savedCard[key];
+            return prodect;
+        })
+        setCart(cartProdects);
+
+    },[])
     const fast10 =fakeData.slice(0,10);
    const [products , setProducts]=useState(fast10);
    const [ cart,setCart]= useState([]);
@@ -29,7 +41,11 @@ const Shop = () => {
                 }
                  
             </div>
-             <Cart cart={cart}></Cart>
+             <Cart cart={cart}>
+             <Link to="/reviw">
+                    <button className="mane-btn">Review Card</button>
+                </Link>
+             </Cart>
             
            
            

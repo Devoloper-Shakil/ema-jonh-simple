@@ -5,9 +5,9 @@ import './Prodect.css'
 import { Link } from 'react-router-dom';
 
 const Prodect = (props) => {
-
+//  console.log(props)
     const {img,name,seller,price,star,category}=props.prodect;
-    // console.log(props.prodect)
+   
     
     return (
         <div className="prodect-contener">
